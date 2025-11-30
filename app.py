@@ -10,8 +10,8 @@ def gen_rand_list(min, max, count):
 def main():
     context = zmq.Context()
     socket = context.socket(zmq.REP)
-    socket.bind("tcp://*:5557")
-    print("Random number generator microservice running on port 5557")
+    socket.bind("tcp://*:4000")
+    print("Random number generator microservice running on port 4000")
 
     while True:
         message = socket.recv_string()
